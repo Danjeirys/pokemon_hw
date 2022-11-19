@@ -5,7 +5,7 @@ class Index extends React.Component {
         const {pokemon} = this.props
         return (
             <div>
-                <h1>Fruits Index Page</h1>
+                <h1>The Pokemon App</h1>
                 <nav>
                 <a href="/pokemon/new">Create Your own pokemon!</a>
                 </nav>
@@ -14,9 +14,11 @@ class Index extends React.Component {
                     pokemon.map ((poke, i) => {
                         return (
                             <li key = {i}> 
-                                The {' '}
-                                <a href={`/pokemon/${fruit._id}`}>{poke.name}</a>
+                                {/* <a href={`/pokemon/${fruit._id}`}>{poke.name}</a> */
+                                <a href='/pokemon'>{poke.name}</a>
 
+                                
+                                }
                             </li>
                         )
                     })
@@ -28,3 +30,4 @@ class Index extends React.Component {
 }
 
 module.exports = Index
+

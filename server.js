@@ -3,8 +3,10 @@ const express = require("express")
 const pokemon = require("./models/pokemon")
 const app = express()
 const PORT = 3000
+const reactViews = require ('express-react-views')
 
-
+app.set('view engine', 'jsx')
+app.engine('jsx', reactViews.createEngine())
 
 
 app.get ('/', (req, res) => {
@@ -12,8 +14,10 @@ app.get ('/', (req, res) => {
 })
 
 app.get ('/pokemon', (req, res) => {
-    res.send (pokemon)
+    res.render ('Index', {pokemon: pokemon})
 })
+
+
 
 
 
