@@ -13,13 +13,13 @@ class Index extends React.Component {
                 {
                     pokemon.map ((poke, i) => {
                         return (
-                            <li key = {i}> 
+                            <ul key = {i}> 
                                 {/* <a href={`/pokemon/${fruit._id}`}>{poke.name}</a> */
-                                <a href='/pokemon'>{poke.name}</a>
+                                <a href={`/pokemon/${poke._id}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a>
 
                                 
                                 }
-                            </li>
+                            </ul>
                         )
                     })
                 }
