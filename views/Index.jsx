@@ -1,7 +1,7 @@
-const React = require ('react')
+const React = require('react')
 
 class Index extends React.Component {
-    render () {
+    render() {
         const {pokemon} = this.props
         return (
             <div>
@@ -13,13 +13,10 @@ class Index extends React.Component {
                 {
                     pokemon.map ((poke, i) => {
                         return (
-                            <ul key = {i}> 
-                                {/* <a href={`/pokemon/${fruit._id}`}>{poke.name}</a> */
-                                <a href={`/pokemon/${i}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a>
-
-                                
-                                }
-                            </ul>
+                            <li key = {i}> 
+                                {/* <a href={`/pokemon/${i}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a> */}
+                                <a href={`/pokemon/${poke._id}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a>
+                            </li>
                         )
                     })
                 }

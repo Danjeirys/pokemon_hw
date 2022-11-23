@@ -1,8 +1,8 @@
-const React = require ('react') 
+const React = require('react') 
 
 class Show extends React.Component {
     render () {
-        const {name,img} = this.props
+        const {name,img} = this.props.pokemon
         // console.log (poke)
         return (
             <div>
@@ -11,7 +11,7 @@ class Show extends React.Component {
 
                     <h2>The is {name} </h2>
                     <img src={img + ".jpg"}/>
-                    <a href='/pokemon'>Back</a>
+                    <a href={`/pokemon/`}>Back</a>
             </div>
         )
     }
