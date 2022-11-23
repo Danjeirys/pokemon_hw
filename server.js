@@ -27,7 +27,7 @@ app.get ('/pokemon', (req, res) => {
 })
 
 app.get ('/pokemon/:id', (req,res) => {
-    res.render (pokemon [req.params.id])
+    res.render ('Show', pokemon [req.params.id])
 })
 
 // app.get("/pokemon/:id", (req, res) => {
@@ -46,9 +46,9 @@ app.get ('/pokemon/:id', (req,res) => {
 // })
 // })
 
-app.get ('/pokemon/new', (req,res) => {
-    res.render ('new')
-})
+// app.get ('/pokemon/new', (req,res) => {
+//     res.render ('new')
+// })
 
 
 

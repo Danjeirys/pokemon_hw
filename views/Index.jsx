@@ -15,7 +15,7 @@ class Index extends React.Component {
                         return (
                             <ul key = {i}> 
                                 {/* <a href={`/pokemon/${fruit._id}`}>{poke.name}</a> */
-                                <a href={`/pokemon/${poke._id}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a>
+                                <a href={`/pokemon/${i}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a>
 
                                 
                                 }

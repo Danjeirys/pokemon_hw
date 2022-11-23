@@ -2,18 +2,21 @@ const React = require ('react')
 
 class Show extends React.Component {
     render () {
-        const poke = this.props.poke
-        console.log (poke)
+        const {name,img} = this.props
+        // console.log (poke)
         return (
             <div>
-                <h1> Pokemon Show Page</h1>
+                <h1> Gotta Catch 'Em All</h1>
 
-                <div> 
-                    The is {poke.name}! 
-                </div>
+
+                    <h2>The is {name} </h2>
+                    <img src={img + ".jpg"}/>
+                    <a href='/pokemon'>Back</a>
             </div>
         )
     }
 }
+
+
 
 module.exports = Show
